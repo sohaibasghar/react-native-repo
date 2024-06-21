@@ -1450,7 +1450,7 @@ const Vendor = ({ navigation }) => {
 
 	const toggleAddModal = () => {
 		setAddModalVisible(!isAddModalVisible);
-		Alert.alert('Vendor added successfully');
+		
 	};
 	const addVendor = async (vendor) => {
 		const data = {
@@ -1462,6 +1462,7 @@ const Vendor = ({ navigation }) => {
 					'Content-Type': 'application/json'
 				}
 			});
+			Alert.alert('Vendor added successfully');
 		} catch (error) {
 			console.error('Error submitting form data:', error);
 		}
